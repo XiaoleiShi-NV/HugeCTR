@@ -1,4 +1,4 @@
-name: GitHub CI Test
+name: github-ci-test 
 
 on: [push]
 
