@@ -22,7 +22,7 @@ jobs:
         with:
           submodules: true
 
-      - name: Build single node 
+      - name: build 
         working-directory: ${{runner.workspace}}/HugeCTR
         run: |
           mkdir build && cd build
