@@ -1,4 +1,4 @@
-name: github-ci-test
+name: GitHub CI Test
 
 on: [push]
 
@@ -8,7 +8,7 @@ env:
   # VERSION: XiaoleiShi-NV-ci_test
 
 jobs:
-  build:
+  Single_node_test:
     runs-on: self-hosted
 
     container: 
@@ -29,12 +29,20 @@ jobs:
           mkdir build && cd build
           cmake -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DSM=70 .. && make -j
 
-      - name: utest
+      - name: Unit test
         working-directory: ${{runner.workspace}}/HugeCTR/build/bin
         shell: bash
         run: |
-          pwd
-          ls -alh
           ./layers_test
           ./embedding_test
+          ./checker_test
+          ./data_parser_test
+          ./data_reader_test
+          ./device_map_test
+          ./heap_test
+          ./loss_test
+          ./optimizer_test
+          ./regularizers_test
+          ./parser_test
+          ./session_test
 
