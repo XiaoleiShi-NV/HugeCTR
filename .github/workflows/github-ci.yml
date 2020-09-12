@@ -8,7 +8,7 @@ env:
   # VERSION: XiaoleiShi-NV-ci_test
 
 jobs:
-  Build:
+  build:
     runs-on: self-hosted
 
     container: 
