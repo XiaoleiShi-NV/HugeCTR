@@ -22,13 +22,13 @@ jobs:
         with:
           submodules: true
 
-      - name: build 
+      - name: Build 
         working-directory: ${{runner.workspace}}/HugeCTR
         run: |
           mkdir build && cd build
           cmake -DCMAKE_BUILD_TYPE=Release -DSM=70 .. && make -j
 
-      - name: Unit test
+      - name: Unit_test
         working-directory: ${{runner.workspace}}/HugeCTR/build/bin
         shell: bash
         run: |
