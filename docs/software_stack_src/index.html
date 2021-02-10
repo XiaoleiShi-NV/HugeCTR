@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0053)file:///C:/Users/xiaoleis/Desktop/software_stack.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" type="text/css" href="./index_files/site.css">
+      <title>HugeCTR Software Stack</title>
+      <!--[if lt IE 9]>
+      <script src="../common/formatting/html5shiv-printshiv.min.js"></script>
+      <![endif]-->
+      </head>
+   <body class="online" data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+
+      <div id="site-content">
+         <div id="contents-container">
+            <article id="contents">
+               <div class="topic nested0" id="abstract"><a name="abstract" shape="rect">
+                     <!-- --></a><h2 class="title topictitle1">HugeCTR Software Stack</h2>
+                  <div class="body conbody">
+                     <p class="shortdesc">This dependency matrix shows the software stack of NVIDIA HugeCTR project. The matrix provides a single
+                        view into the supported software and specific versions for each release of the HugeCTR.
+                     </p>
+                  </div>
+                  <div class="section">
+                     <div class="p">
+                        <div class="note important"><span class="importanttitle">Important:</span> Content that is included in <span class="ph" style="color:#0000FF;">&lt;&lt;<font style="color:#0000FF;"></font>&gt;&gt;</span> brackets indicates new content from the previously published version.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="topic task nested0" id="framework-matrix-2020"><a name="framework-matrix-2020" shape="rect">
+                  </a><div class="body taskbody"><a name="framework-matrix-2020" shape="rect">
+                     </a><div class="section" id="framework-matrix-2020__section_dmz_xwg_kkb"><a name="framework-matrix-2020" shape="rect"></a><a name="framework-matrix-2020__section_dmz_xwg_kkb" shape="rect">
+                        </a><div class="tablenoborder"><a name="framework-matrix-2020__section_dmz_xwg_kkb" shape="rect"></a><a name="framework-matrix-2020__table_a2n_zwg_kkb" shape="rect">
+                              <!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="framework-matrix-2020__table_a2n_zwg_kkb" class="table" frame="border" border="1" rules="all">
+                              <caption><span class="tablecap">Table 1. Software stack for HugeCTR container images</span></caption>
+                              <thead class="thead" align="left">
+                                 <tr class="row">
+                                    <th class="entry" valign="top" width="3.8880248833592534%" id="d54e128" rowspan="1" colspan="1">Container Image</th>
+                                    <th class="entry" colspan="2" valign="top" id="d54e131" rowspan="1">v3.0</th>
+                                    <th class="entry" colspan="2" valign="top" id="d54e134" rowspan="1">v2.3</th>
+                                 </tr>
+                              </thead>
+                              <tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry" colspan="5" valign="top" headers="d54e128 d54e131 d54e134 d54e137 d54e140 d54e144 d54e147 d54e150 d54e153 d54e156 d54e159" rowspan="1"><strong class="ph b">DGX</strong></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1">DGX System</td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e131" rowspan="1">
+                                       <ul class="ul">
+                                          <li class="li">DGX-1</li>
+                                          <li class="li">DGX-2</li>
+                                          <li class="li">DGX A100</li>
+                                          <li class="li">DGX Station</li>
+                                       </ul>
+                                    </td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e134" rowspan="1">
+                                       <ul class="ul">
+                                          <li class="li">DGX-1</li>
+                                          <li class="li">DGX-2</li>
+                                          <li class="li">DGX A100</li>
+                                          <li class="li">DGX Station</li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" colspan="5" valign="top" headers="d54e128 d54e131 d54e134 d54e137 d54e140 d54e144 d54e147 d54e150 d54e153 d54e156 d54e159" rowspan="1"><strong class="ph b">NVIDIA Certified Systems</strong></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="http://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" shape="rect">NVIDIA Driver</a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1">
+                                       <p class="p">Release v3.0 is based on CUDA <span class="ph">11.0.221</span>,
+                                          which requires NVIDIA driver release <span class="ph">450.51</span>.
+                                       </p>
+                                       <p class="p">However, if you are running on Tesla (for example, T4 or any
+                                          other Tesla board), you may use NVIDIA driver release 418.xx or
+                                          440.30.
+                                       </p>
+                                       <p class="p">The CUDA driver's compatibility package only supports particular
+                                          drivers. <a name="fnsrc_4" href="https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html#fntarg_4" shape="rect"><sup>1</sup></a></p>
+                                    </td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1">
+                                       <p class="p">Release v2.3 is based on CUDA 11.0.221, which requires NVIDIA
+                                          driver release 450.51.
+                                       </p>
+                                       <p class="p">However, if you are running on Tesla (for example, T4 or any
+                                          other Tesla board), you may use NVIDIA driver release 418.xx or
+                                          440.30.
+                                       </p>
+                                       <p class="p">The CUDA driver's compatibility package only supports particular
+                                          drivers. <a name="fnsrc_4" href="https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html#fntarg_4" shape="rect"><sup>1</sup></a></p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1">GPU Model</td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e131" rowspan="1">
+                                       <ul class="ul">
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/data-center/nvidia-ampere-gpu-architecture" target="_blank" shape="rect">NVIDIA Ampere GPU
+                                                Architecture</a></li>
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/geforce/turing/" target="_blank" shape="rect">Turing</a></li>
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/" target="_blank" shape="rect">Volta</a></li>
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/" target="_blank" shape="rect">Pascal</a></li>
+                                       </ul>
+                                    </td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e134" rowspan="1">
+                                       <ul class="ul">
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/data-center/nvidia-ampere-gpu-architecture" target="_blank" shape="rect">NVIDIA Ampere GPU
+                                                Architecture</a></li>
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/geforce/turing/" target="_blank" shape="rect">Turing</a></li>
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/" target="_blank" shape="rect">Volta</a></li>
+                                          <li class="li"><a class="xref" href="https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/" target="_blank" shape="rect">Pascal</a></li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" colspan="5" valign="top" headers="d54e128 d54e131 d54e134 d54e137 d54e140 d54e144 d54e147 d54e150 d54e153 d54e156 d54e159" rowspan="1"><strong class="ph b">Base Container Image</strong></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1">Container OS</td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e134" rowspan="1"><a class="xref" href="http://releases.ubuntu.com/18.04/" target="_blank" shape="rect">Ubuntu 18.04</a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e137" rowspan="1"><a class="xref" href="http://releases.ubuntu.com/18.04/" target="_blank" shape="rect">Ubuntu 18.04</a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="http://docs.nvidia.com/cuda/index.html" target="_blank" shape="rect"><span class="ph">CUDA</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph"><a class="xref" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html" target="_blank" shape="rect">11.0.221</a></span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><span class="ph"><a class="xref" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html" target="_blank" shape="rect">11.0.221</a></span></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://docs.nvidia.com/cuda/cublas/index.html" target="_blank" shape="rect"><span class="ph">cuBLAS</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph"><a class="xref" href="https://docs.nvidia.com/cuda/cublas/index.html" target="_blank" shape="rect">11.2.0.252</a></span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><span class="ph"><a class="xref" href="https://docs.nvidia.com/cuda/cublas/index.html" target="_blank" shape="rect">11.2.0.252</a></span></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://docs.nvidia.com/deeplearning/cudnn/release-notes/index.html" target="_blank" shape="rect"><span class="ph">cuDNN</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><a class="xref" href="https://docs.nvidia.com/deeplearning/cudnn/release-notes/index.html" target="_blank" shape="rect">8.0.4</a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://docs.nvidia.com/deeplearning/cudnn/release-notes/index.html" target="_blank" shape="rect">8.0.4</a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://docs.nvidia.com/deeplearning/nccl/archives/index.html" target="_blank" shape="rect"><span class="ph">NCCL</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><a class="xref" href="https://docs.nvidia.com/deeplearning/nccl/release-notes/index.html" target="_blank" shape="rect">2.7.8</a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://docs.nvidia.com/deeplearning/nccl/release-notes/index.html" target="_blank" shape="rect">2.7.8</a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" colspan="5" valign="top" headers="d54e128 d54e131 d54e134 d54e137 d54e140 d54e144 d54e147 d54e150 d54e153 d54e156 d54e159" rowspan="1"><strong class="ph b">Packages</strong></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://cmake.org/" target="_blank" shape="rect"><span class="ph">CMake</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://cmake.org/cmake/help/latest/release/3.18.html" target="_blank" shape="rect"><span class="ph">3.18.2</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://cmake.org/cmake/help/latest/release/3.17.html" target="_blank" shape="rect"><span class="ph">3.17.0</span></a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://www.open-mpi.org/projects/hwloc/" target="_blank" shape="rect"><span class="ph">hwloc</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://www.open-mpi.org/projects/hwloc/doc/" target="_blank" shape="rect"><span class="ph">2.4.0</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://www.open-mpi.org/projects/hwloc/doc/" target="_blank" shape="rect"><span class="ph">2.2.0</span></a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://www.openucx.org/" target="_blank" shape="rect"><span class="ph">UCX</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://github.com/openucx/ucx/releases/tag/v1.9.0" target="_blank" shape="rect"><span class="ph">1.9.0</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://github.com/openucx/ucx/releases/tag/v1.8.0" target="_blank" shape="rect"><span class="ph">1.8.0</span></a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://www.open-mpi.org/" target="_blank" shape="rect"><span class="ph">OpenMPI</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://www.open-mpi.org/software/ompi/v4.1/" target="_blank" shape="rect"><span class="ph">4.1.0</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://www.open-mpi.org/software/ompi/v4.0/" target="_blank" shape="rect"><span class="ph">4.0.3</span></a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://rapids.ai/index.html#libraries" target="_blank" shape="rect"><span class="ph">rapids/rmm</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://github.com/rapidsai/rmm/releases/tag/v0.17.0" target="_blank" shape="rect"><span class="ph">0.17</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://github.com/rapidsai/rmm/releases/tag/v0.16.0" target="_blank" shape="rect"><span class="ph">0.16</span></a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://rapids.ai/index.html#libraries" target="_blank" shape="rect"><span class="ph">rapids/cudf</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://github.com/rapidsai/cudf/releases/tag/v0.17.0" target="_blank" shape="rect"><span class="ph">0.17</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1"><a class="xref" href="https://github.com/rapidsai/cudf/releases/tag/v0.16.0" target="_blank" shape="rect"><span class="ph">0.16</span></a></td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1"><a class="xref" href="https://www.tensorflow.org/" target="_blank" shape="rect"><span class="ph">TensorFlow</span></a></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1"><span class="ph" style="color:#0000FF;">&lt;&lt;<a class="xref" href="https://github.com/tensorflow/tensorflow/releases/tag/v2.4.0" target="_blank" shape="rect"><span class="ph">2.4.0</span></a>&gt;&gt;</span></td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1">nightly-gpu</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry" valign="top" width="3.8880248833592534%" headers="d54e128" rowspan="1" colspan="1">Python libs</td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e147" rowspan="1">
+                                       <ul class="ul">
+                                          <li class="li">numpy</li>
+                                          <li class="li">pandas</li>
+                                          <li class="li">sklearn</li>
+                                          <li class="li">ortools</li>
+                                          <li class="li">jupyter</li>
+                                       </ul>
+                                    </td>
+                                    <td class="entry" colspan="2" valign="top" headers="d54e150" rowspan="1">
+                                       <ul class="ul">
+                                          <li class="li">numpy</li>
+                                          <li class="li">pandas</li>
+                                          <li class="li">sklearn</li>
+                                          <li class="li">ortools</li>
+                                          <li class="li">jupyter</li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="fn"><a name="fntarg_4" href="https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html#fnsrc_4" shape="rect"><sup>1</sup></a>  For a complete list of supported drivers, see the
+                  <a class="xref" href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html#cuda-application-compatibility" target="_blank" shape="rect"><u class="ph u">CUDA Application
+                        Compatibility</u></a> topic. For more
+                  information, see <a class="xref" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#cuda-compatibility-and-upgrades" target="_blank" shape="rect"><u class="ph u">CUDA Compatibility and
+                        Upgrades</u></a>.
+               </div>
+
+               <hr id="contents-end" style="margin: 0px 0px 0px;">
+
+            </article>
+         </div>
+      </div>
+</body></html>

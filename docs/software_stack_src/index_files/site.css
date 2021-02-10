@@ -1,0 +1,157 @@
+@import url("cppapiref.css");
+
+html, body { margin:0; padding:0; background:#fff; font-family:'Trebuchet MS', 'DIN Pro', sans-serif; overflow:hidden }
+#header { background:#303030 url(bg-head.png) left bottom repeat-x; position:fixed; top:0; left:0; width:100%; height:53px; overflow:hidden; }
+#header #company { position:absolute; text-indent:-2000px; left:13px; top:15px; width:180px; height:40px; background:url(ac-header3.png); }
+#header #site-title { position:absolute; text-indent:-2000px; left:220px; top:18px; width:592px; height:32px; background:url(deep-learning-documentation.png); }
+
+
+/* online class is added by JS */
+body.online #header #company { left:11px; top:12px; width:180px; height:40px; background:url(ac-header3.png); cursor:pointer; }
+body.online #header #site-title { top:15px }
+
+#site-content {
+  position:fixed; top:0; bottom:0; left:0; right:0;
+  border-top:10px solid #303030;
+  border-left:0px solid #303030;
+  border-bottom:10px solid #303030;
+  border-right:0px solid #303030;
+}
+
+#contents-container {
+  height:100%;
+  overflow:auto;
+}
+
+/* Equation warning and math highlighting */
+.math-unsupported { background:#f99; }
+
+#eqn-warning {
+  display:none;
+  background:#f99; color:#600;
+  padding:0.2em 10px;
+  font-size:12px;
+  overflow:auto;
+}
+
+#breadcrumbs {
+  text-align:left;
+  padding:10px;
+  font-size:14px;
+  margin:0px;
+  margin-bottom:1em;
+  float:left;
+}
+
+#release-info {
+  text-align:right;
+  padding:10px;
+  font-size:10px;
+  margin:0px;
+  margin-bottom:1em;
+  float:right;
+}
+
+
+/* for the search result highlighting */
+.highlight { background:yellow; }
+
+#search input {
+  position:absolute; width:204px; height:28px; top:12px; right:6px;
+  padding-left:26px;
+  font-size:14px; font-family:'Trebuchet MS', 'DIN Pro', sans-serif; line-height:25px;
+
+  -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
+  -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
+
+  -webkit-box-shadow: 0px 1px #7D7D7D;
+  -moz-box-shadow: 0px 1px #7D7D7D;
+  box-shadow: 0px 1px #7D7D7D;
+
+  border:none;
+  color: #dadada;
+  background-color:#6F6F6F;
+
+  background: -moz-linear-gradient(top, #6F6F6F 0%, #555555 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6F6F6F), color-stop(100%,#555555));
+  background: -webkit-linear-gradient(top, #6F6F6F 0%, #555555 100%);
+  background: -o-linear-gradient(top, #6F6F6F 0%,#555555 100%);
+  background: -ms-linear-gradient(top, #6F6F6F 0%,#555555 100%);
+  background: linear-gradient(top, #6F6F6F 0%,#555555 100%);
+  -pie-background: linear-gradient(#6F6F6F, #555555);
+}
+
+#contents { padding:1em 1.5em; font-size:14px; }
+#contents h1, #contents h2, #contents h3, #contents h4, #contents h5, #contents h6 { color:black; margin:0; padding-top:0.2em; margin-bottom:0.3em; clear:both; }
+#contents > .header { display:none }
+#contents > .header > h1 { font-size:22px; color:#000; margin-bottom:1em; }
+#contents h2 { font-size:18px }
+#contents h3 { font-size:17px }
+#contents h4 { font-size:16px }
+#contents h5 { font-size:15px }
+#contents h6 { font-size:14px }
+#contents h5, #contents h6 { color:#000; }
+#contents .section { margin-top:0.8em; margin-bottom:2em }
+#contents .section.context { margin-bottom:0.8em }
+#contents .topic .topic h2 { font-size:16px }
+#contents .topic .topic h3 { font-size:14px }
+#contents .topic .topic h4 { font-size:14px; color:#406401; }
+#contents .topic .topic h5 { font-size:14px; color:#000; }
+#contents .topic .topic h6 { font-size:14px; color:#000; }
+#contents .topic .topic { margin-left:1em; padding-left:1em; border-left:3px double #eee; }
+
+#contents p { margin-top:0 }
+#contents-end { visibility:hidden; margin-top:600px; }
+#contents a { color:blue; text-decoration:underline }
+#contents a:hover { color:#8c0; text-decoration:underline!important }
+
+#contents dl.landing-page { margin:2em; padding:0 }
+#contents dl.landing-page dt { font-weight:bold; margin:0; padding:0; font-size:15px; }
+#contents dl.landing-page dt a { text-decoration:none; }
+#contents dl.landing-page dd { margin:0; padding:0; margin-bottom:1em; }
+#contents dl.landing-page ul { margin-top:0 }
+#contents dl.landing-page li { color:rgba(0,0,0,0.3) }
+#contents dl.landing-page li a { text-decoration:none }
+#contents dl.landing-page li a:hover { text-decoration:underline }
+
+*.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /* Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/ */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body.drag-active {
+  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+  cursor:e-resize; cursor:ew-resize; cursor:col-resize;
+}
+
+ol.steps li { margin-bottom:1em }
+
+/* Fight some styling in cppapiref.css */
+code, .code, .codeph, pre, pre.screen { font-family:Consolas, Courier, 'Courier New', monospace; color:#240; background:#eaefe0; padding:0 0.2em; border:0!important; margin-bottom:1em }
+code, .codeph { background-color:#f4f7f0; }
+pre { padding:0.2em 0.5em }
+pre code { background-color:#eaefe0; padding:0 }
+h3 + pre, h4 + pre, h5 + pre { margin-top:0.2em }
+.cmd + pre.codeblock { margin-top:0.2em }
+#contents pre.prettyprint { margin-left:0 }
+
+img { max-width:100% }
+pre.codeblock, pre.screen { max-width:100%; overflow:auto }
+
+/* ********************** */
+/* Specific content hacks */
+/* ********************** */
+
+/* Fix kepler-tuning-guide.html#references */
+#references h3 { font-size:100%; color:#000; font-weight:normal; display:inline; }
+#references h3 + p { display:inline }
+
+/* 2019-04-01 mgc: fix for spacing after shortdesc */
+div.abstract + p {
+  padding-top: 10pt;
+}
